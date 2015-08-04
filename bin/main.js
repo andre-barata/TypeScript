@@ -1,6 +1,4 @@
-﻿//# sourceMappingURL=main.js.map
-
-var Teste = (function () {
+﻿var Teste = (function () {
     function Teste() {
         console.log("constructor called");
     }
@@ -20,3 +18,4 @@ a.test();
 a.method2();
 
 
+//# sourceMappingURL=main.js.map
