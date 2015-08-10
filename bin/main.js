@@ -1,21 +1,24 @@
-﻿var Teste = (function () {
-    function Teste() {
-        console.log("constructor called");
+﻿var Utils = (function () {
+    function Utils() {
     }
-    Teste.prototype.test = function () {
-        console.log("test called");
+    Utils.toBin = function (value) {
+        var s = '';
+        for (var i = 1 << 7; i != 0; i >>= 1)
+            s += (value & i) > 0 ? "1" : "0";
+        return s;
     };
-    Teste.prototype.method2 = function () {
-        console.log("teste");
+    Utils.fromBin = function (value) {
+        var ret = 0;
+        for (var i = 0; i < value.length; i++)
+            if (value.charAt(i) === '1') {
+                ret += 2 ^ i;
+                console.log("added 2 ^ " + i + " = " + ret);
+            }
+        return ret;
     };
-    return Teste;
+    return Utils;
 })();
 
-console.log("hello");
-
-var a = new Teste();
-a.test();
-a.method2();
-
-
+console.log("123 to bin = " + Utils.toBin(123));
+console.log("110101  from bin = " + Utils.fromBin("110101"));
 //# sourceMappingURL=main.js.map

@@ -8,8 +8,8 @@
 
 
 {
-    "version": "0.1.0",
-    "showOutput": "always",
+	"version": "0.1.0",
+	"showOutput": "silent",
 	"isShellCommand": true,
 	"command": "tsc",
 	"args": ["--sourceMap", "--outDir","bin","main.ts"],
