@@ -9,7 +9,7 @@
     };
     Utils.fromBin = function (value) {
         var ret = 0;
-        for (var i = 0; i < value.length; i++)
+        for (var i = value.length; i >= 0; i--)
             if (value.charAt(i) === '1') {
                 ret += 2 ^ i;
                 console.log("added 2 ^ " + i + " = " + ret);
