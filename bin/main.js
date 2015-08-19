@@ -3,7 +3,7 @@
     }
     Utils.numToBin = function (value) {
         var s = '';
-        for (var i = 1 << 7; i != 0; i >>= 1)
+        for (var i = 1 << 31; i != 0; i >>= 1)
             s += (value & i) > 0 ? "1" : "0";
         return s;
     };
